@@ -9,8 +9,7 @@ function App() {
     e.preventDefault();
     if (search === "") return;
 
-    const endpoint =
-      "https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=20&srsearch=${search}";
+    const endpoint = `https://en.wikipedia.org/w/api.php?action=query&list=search&prop=info&inprop=url&utf8=&format=json&origin=*&srlimit=25&srsearch=${search}`;
 
     const response = await fetch(endpoint);
 
@@ -26,6 +25,7 @@ function App() {
     <div className="App">
       <header>
         <h1>Wiki Seeker</h1>
+        <h3>A Wikipedia Search Engine</h3>
         <form className="search-box" onSubmit={handleSearch}>
           <input
             type="search"
@@ -41,11 +41,18 @@ function App() {
         )}
       </header>
       <div className="results">
-        <div className="result">
-          <h3>Title Goes Here</h3>
-          <p> lorem ipsum dolar</p>
-          <a href="a">Read more</a>
-        </div>
+        {results.map((result, i) => {
+          const url = `https://en.wikipedia.org/?curid=${result.pageid}`;
+          return (
+            <div className="result">
+              <h3>{result.title}</h3>
+              <p dangerouslySetInnerHTML={{ __html: result.snippet }}></p>
+              <a href={url} target="_blank" rel="noreferrer">
+                Read more
+              </a>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

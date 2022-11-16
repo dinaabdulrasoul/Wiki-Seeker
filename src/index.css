@@ -12,6 +12,14 @@ p {
   margin-bottom: 16px;
 }
 
+h3 {
+  color: #ff4277;
+  font-weight: 400;
+  margin-bottom: 16px;
+  font-size: 24px;
+  text-align: center;
+}
+
 body {
   background-color: black;
 }
@@ -34,7 +42,7 @@ h1 {
   font-size: 42px;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
 }
 
 .search-box {
@@ -78,6 +86,11 @@ h1 {
   transition: 0.4s;
 }
 
+.result p .search-match {
+  font-weight: 700;
+  color: #359fa0;
+}
+
 .result:hover {
   box-shadow: 3px 3px 6px white;
 }
@@ -87,6 +100,8 @@ h1 {
   font-size: 28px;
   margin-bottom: 16px;
   text-transform: capitalize;
+  font-weight: 600;
+  text-align: left;
 }
 
 .result p {
