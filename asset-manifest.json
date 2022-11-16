@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/wikiseeker/static/css/main.6a5b3472.css",
+    "main.js": "/wikiseeker/static/js/main.863b7e14.js",
+    "index.html": "/wikiseeker/index.html",
+    "main.6a5b3472.css.map": "/wikiseeker/static/css/main.6a5b3472.css.map",
+    "main.863b7e14.js.map": "/wikiseeker/static/js/main.863b7e14.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6a5b3472.css",
+    "static/js/main.863b7e14.js"
+  ]
+}
