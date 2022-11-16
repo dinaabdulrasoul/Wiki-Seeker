@@ -6,6 +6,12 @@
   color: black;
 }
 
+p {
+  color: white;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
 body {
   background-color: black;
 }
